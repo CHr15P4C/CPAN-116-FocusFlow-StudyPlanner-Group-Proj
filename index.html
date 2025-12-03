@@ -8,6 +8,45 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    
+    <!-- Main container to be able to format the panels to be side by side -->
+    <main class="layout">
+        <!-- first panel holding the submission form -->
+        <section class="panel">
+            <!-- form for taking study session inputs-->
+            <form id="session-form">
+                <!-- populating the form elements-->
+                <!-- using method of label holding inputs -->
+                <label>
+                    Session Title 
+                    <input type="text" id="session-title" required />
+                </label>
+                <label>
+                    Subject
+                    <input type="text" id="session-subject" placeholder="e.g. CPAN111, CPAN113" />
+                </label>
+                <label>
+                    Duration (minutes)
+                    <input type="number" id="session-duration" min="5" value="25" required />                    
+                </label>
+                <lablel>
+                    Break Length (minutes)
+                    <input type="number" id="session-break" min="1" value="5"  />
+                </lablel>
+                <!--Text area allows multi line inputs rather than single line with overflow, not mandatory input-->
+                <label>
+                    <textarea id="session-tasks" rows="4" placeholder="Review notes&#10;Do practice problems"></textarea>
+                </label>
+            </form>
+            <!--sub panel-->
+            <section class="panel-sub">
+                <h2>Session History</h2>
+                <ul id="today-sessions" class="session-list"></ul>
+            </section> 
+        <!-- end of input panel section-->
+        </section>
+         
+        
+
+    </main>
 </body>
 </html>
